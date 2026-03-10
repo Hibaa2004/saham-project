@@ -46,7 +46,8 @@ def clear_cache(key: str) -> None:
         except Exception:
             pass
 # ─────────────────────────────────────────────────────────────────────────────
-
+import os
+os.environ["STREAMLIT_SERVER_MAX_UPLOAD_SIZE"] = "500"
 # Configuration de la page
 st.set_page_config(
     page_title="Application de Structuration de Données",
